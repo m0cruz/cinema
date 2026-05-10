@@ -44,7 +44,7 @@ public class SessaoController {
         return repository.findById(id).map(record -> {
             record.setFilme(sessao.getFilme());
             record.setPreco(sessao.getPreco());
-            record.setSalaLotada(sessao.isSalaLotada());
+            record.setSalaLotada(sessao.getSalaLotada());
             Sessao updated = repository.save(record);
             return ResponseEntity.ok().body(updated);
         }).orElse(ResponseEntity.notFound().build());

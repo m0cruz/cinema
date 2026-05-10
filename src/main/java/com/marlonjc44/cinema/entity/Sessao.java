@@ -28,8 +28,8 @@ public class Sessao {
     private String filme;
 
     @Column(name = "preco", nullable = false)
-    private float preco;
+    private Float preco;
 
     @Column(name = "sala_lotada", nullable = false)
-    private boolean salaLotada;
+    private Boolean salaLotada;
 }
